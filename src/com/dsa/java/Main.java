@@ -1,22 +1,153 @@
 package com.dsa.java;
 
-import com.sun.source.tree.Tree;
-
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
-
     public static void main(String[] args) {
 
-        // GCD
-        int a = 37;
-        int b = 79;
+
+
+        /* / Rotate a Number
+        int n= 2451;
+        int rev=0;
+        while (n>0){
+            int r = n%10;
+            rev = rev*10+r;
+            n/=10;
+        }
+        System.out.println(rev);
+
+         */
+
+        /* // Print All Divisors of a Number
+        int n = 12;
+        for(int i = 1; i<=n;i++){
+            if(n%i==0){
+                System.out.println(i);
+            }
+        }
+
+         */
+
+        /* // Find the Kth Largest Element in an Array
+        int [] num = {1,2,3,12,4,15,5,6,9,7};
+        int k = 3;
+        Arrays.sort(num);
+        int l = num.length-k;
+        System.out.println(num[l]);
+
+         */
+
+
+        /* // Implement Binary Search
+        int [] num = {1,2,3,4,5,6,7};
+        int t = 7;
+        int s = 0;
+        int e = num.length-1;
+        while (s<=e){
+            int mid  = (s+e)/2;
+            if(num[mid]==t){
+                System.out.println(mid);
+                return;
+            } else if (num[mid]>t){
+                e=mid-1;
+            } else {
+                s=mid+1;
+            }
+        }
+
+         */
+
+    /*
+    public static void rotate(int [] num, int k){
+        int n = num.length;
+        k=k%n;
+        shift(num,0,n-1);
+        shift(num,0,k-1);
+        shift(num,k,n-1);
+    }
+    public static void shift(int [] num, int s,int e){
+        while (s<e){
+            int  t = num[s];
+            num[s]=num[e];
+            num[e]=t;
+            s++;
+            e--;
+        }
+    }
+    public static void main(String[] args) {
+
+        // Rotate an Array
+        int [] num = {1,2,3,4,5,6,7};
+        int  k= 3;
+        rotate(num,k);
+        for (int n : num ){
+            System.out.print(n+" ");
+        }
+
+     */
+
+
+        /* // Find All Pairs with a Given Sum
+        int [] num = {2, 4, 3, 5, 7, 8, 9};
+        int sum = 10;
+        for(int i = 0; i < num.length;i++){
+            for(int j = i+1 ; j< num.length;j++){
+                if (num[i]+num[j]==sum){
+                    System.out.println(num[i]+" "  +num[j]);
+                }
+            }
+        }
+
+         */
+
+        /* // Armstrong number
+
+        int n = 123;
+        int l = (n+"").length();
+        int t =n;
+        int sum =0;
+        while (t>0){
+            int r = t%10;
+//            System.out.println(Math.sqrt(r));
+            sum+= Math.pow(r,l);
+            t/=10;
+        }
+        System.out.println(sum==n?"Armstrong":"Not Armstrong");
+
+         */
+
+        /* // LCM  a*b/gcd
+        int a= 68;
+        int b= 24;
+        int gcd = gcd(a,b);
+        int lcm = a*b/gcd;
+        System.out.println(lcm);
+
+        public static int gcd(int a,int b) {
+            while (b != 0) {
+                int t = b;
+                b = a % b;
+                a = t;
+            }
+            return a;
+        }
+
+         */
+
+        /* // GCD
+        int a = 80;
+        int b = 90;
         while (b>0){
+            int t =b;
             b=a%b;
-            a=b;
+            a=t;
         }
         System.out.println(a);
+
+         */
 
         /* // Majority Element
         int [] num = {2,2,1,1,2};
